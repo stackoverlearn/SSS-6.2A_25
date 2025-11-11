@@ -9,6 +9,11 @@ class Company extends Model
 {
     use HasFactory;
 
+    public function contacts() 
+    {
+        return $this->hasMany(Contact::class);
+    }
+
     // Enable Mass Assignment
     protected $fillable = ['name', 'address', 'website', 'email'];
 }

@@ -1,0 +1,12 @@
+// Paste this inside Tinker
+
+$newCompany = Company::create(['name'=>'UOM', 'address'=>'Msida', 'website'=>'um.edu.mt', 'email'=>'admin@um.edu.mt'])
+
+$company = Company::first()
+$contact1 = ["first_name"=>"James", "last_name"=>"Attard", "email"=>"ja@gmail.com", "address"=>"Malta"]
+$contact2 = ["first_name"=>"Mary", "last_name"=>"Ciantar", "email"=>"mcg@gmail.com", "address"=>"Malta"]
+$contact3 = ["first_name"=>"Joe", "last_name"=>"Borg", "email"=>"joeborg@gmail.com", "address"=>"Malta"]
+
+$company->contacts()->save($contact1)
+$company->contacts()->save($contact2)
+$company->contacts()->save($contact3)
