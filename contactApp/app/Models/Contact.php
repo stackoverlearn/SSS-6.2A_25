@@ -15,5 +15,5 @@ class Contact extends Model
     }
 
     // Enable mass assignment
-    protected $fillable = ['first_name', 'last_name', 'phone', 'email', 'address'];
+    protected $fillable = ['first_name', 'last_name', 'phone', 'email', 'address', 'company_id'];
 }

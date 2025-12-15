@@ -26,6 +26,15 @@ class ContactController extends Controller
     }
 
     function store(Request $request) {
-        dd($request->all());
+        $request->validate([
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'email'=>'required|email',
+            'address'=>'required',
+            'company_id'=>'required|exists:companies,id'
+        ]);
+        // dd($request->all());
+        Contact::create($request->all());
+        return redirect()->route('contacts.index')->with('message', 'Contact has been added successfully!');
     }
 }
