@@ -24,4 +24,8 @@ class ContactController extends Controller
         $contact = Contact::find($id);
         return view('contacts.show', compact('contact'));
     }
+
+    function store(Request $request) {
+        dd($request->all());
+    }
 }
